@@ -11,6 +11,8 @@ Ready to steal some treasures from Uncle Dagoberts Money Bin?
 
 Read carefully this [site](https://portswigger.net/web-security/request-smuggling) and finish the tutorial to undertand this vulnerability. This kind of attack is very tricky to understand, but is totally awesome when you finally see it in action.
 
+If you still feel lost you can peek into the `SOLUTION.md` file in each of the labs - if you find another path to the solution send me aand tell me how you achieved it.
+
 <br>
 <img width="150" src="static/disclaimer.png">
 <br>
