@@ -1,0 +1,4 @@
+flask
+flask_socketio
+flask_restful
+eventlet
