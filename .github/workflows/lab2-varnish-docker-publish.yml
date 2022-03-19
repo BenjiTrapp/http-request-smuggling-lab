@@ -60,21 +60,15 @@ jobs:
         with:
           images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
 
-      # Build and push Docker image with Buildx (don't push on PR)
-      # https://github.com/docker/build-push-action
+      # https://github.com/marketplace/actions/docker-build-push-action
       - name: Build and push Docker image
         id: build-and-push
-        # uses: docker/build-push-action@ad44023a93711e3deb337508980b4b5e9bcdc5dc
         uses: mr-smithers-excellent/docker-build-push@v5
         with:
           image: http-request-smuggling-lab-2-varnish
-          # context: lab-2-varnish
           dockerfile: lab-2-varnish/varnish.dockerfile
-          # push: ${{ github.event_name != 'pull_request' }}
-          tags: ${{ steps.meta.outputs.tags }}
+          tags: lab2, varnish, latest
           labels: ${{ steps.meta.outputs.labels }}
           registry: ${{ env.REGISTRY }}
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
-
- 
