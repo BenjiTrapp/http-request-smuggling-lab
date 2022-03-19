@@ -67,7 +67,7 @@ jobs:
         # uses: docker/build-push-action@ad44023a93711e3deb337508980b4b5e9bcdc5dc
         uses: mr-smithers-excellent/docker-build-push@v5
         with:
-          image: ${{ env.IMAGE_NAME }}
+          image: http-request-smuggling-lab-2-varnish
           # context: lab-2-varnish
           dockerfile: lab-2-varnish/varnish.dockerfile
           # push: ${{ github.event_name != 'pull_request' }}
