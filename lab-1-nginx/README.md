@@ -1,13 +1,13 @@
 <img src="../static/lab1.png">
 
-This first lab is based on nginx. Your mission is to access the hidden location placed at `/_hidden/index.html` and grab the flag.
+This first lab is based on NGINX. Your mission is to access the hidden location placed at `/_hidden/index.html` and grab the flag.
 
 <br>
 <br>
 <img width="220" src="../static/composition.png">
 </p>
 
-Nginx 1.17.6 - it's all that is required to train 
+NGINX 1.17.6 - it's all that is required to train 
 <br>
 <br>
 
