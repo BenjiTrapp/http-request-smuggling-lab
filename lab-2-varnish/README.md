@@ -4,7 +4,7 @@
 
 Can't get enough? Want to learn some more fancy things? How's about tricking a Varnish Cache? This scenario helps to understand how you could reach a hidden website f.e. an Intranet webserver with internal information. Pretty sneaky right? 
 
-Now to your goal: To get the flag at the internal network `flask.net` you need to open `/flag`. Obviously you can't access the `/flag` from the outer apache `apache.net` network. As a valuable hint you might need to investiage `/socket.io` in the requests. It really help to use `Burp` or another attack proxy to time your attack and investiage the target. 
+Now to your goal: To get the flag at the internal network `flask.net` you need to open `/flag`. Obviously you can't access the `/flag` from the outer apache `apache.net` network. As a valuable hint you might need to investiage `/socket.io` in the requests and watch out for `html` stuff. It really help to use `Burp` or another attack proxy to time your attack and investiage the target. 
 
 To achive this - you need to write some code :)
 
