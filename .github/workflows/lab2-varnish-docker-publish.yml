@@ -67,7 +67,7 @@ jobs:
         with:
           image: http-request-smuggling-lab-2-varnish
           dockerfile: lab-2-varnish/varnish.dockerfile
-          tags: lab2, varnish, latest
+          tags: varnish
           labels: ${{ steps.meta.outputs.labels }}
           registry: ${{ env.REGISTRY }}
           username: ${{ github.actor }}
