@@ -48,7 +48,7 @@
 
 <p align="center">
 <img width="600" src="../static/haha.gif">
-Python 2 ... is not dead yet - anyway was just kidding. The Python 3 variant is below:
+<br> Python 2 ... is not dead yet - anyway was just kidding. <br> The Python 3 variant is below:
 </p>
 
 ```python
