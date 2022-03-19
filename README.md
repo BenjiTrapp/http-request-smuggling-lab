@@ -23,9 +23,9 @@ If you still feel lost you can peek into the `SOLUTION.md` file in each of the l
 <img width="330" src="static/learn.png">
 <br>
 
-* First at all: The technique behin HTTP request smuggling
-* Stop using a Proxy as alternative to a Firewall or WAF - use it as an additional parameter
-* Don't trust your network blindly!
+* First at all: The technique behind HTTP request smuggling
+* Stop using a Proxy as alternative to a Firewall and/or WAF - use it as an additional perimeter
+* Don't trust your network blindly! Zero-Trust is hard to achieve but worth to iterate at it as an inspiration
 
 <br>
 <br>
