@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 echo 'GET / HTTP/1.1\r\n'\
 'Host: localhost\r\n'\
