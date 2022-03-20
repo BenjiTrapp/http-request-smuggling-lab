@@ -21,7 +21,9 @@ The setup of this challenge is based on three components:
 3. Flask Webserver running at `flask.net` - the target that we want to access to get valuable internal information
 
 
-![](img/architecture.png)
+<p align="center">
+<img width="600" src="img/architecture.png">
+</p>
 
 <br>
 <br>
@@ -37,17 +39,23 @@ docker-compose up
 
 The varnish server will on the port 9020. To check if everything works visit http://localhost:9020/. After accessing the site, you will see this:
 
-![](img/img1.png)
+<p align="center">
+<img width="600" src="img/img1.png">
+</p>
 
 This means everything is fine
 
 By visiting http://localhost:9020/websocket.html, you will see a websocket example.
 
-![](img/img2.png)
+<p align="center">
+<img width="600" src="img/img2.png">
+</p>
 
-Since this challenge is hard to tackle:
+# Since this challenge is hard to tackle:
 
-![](https://upload.wikimedia.org/wikipedia/en/b/b2/It%27s_dangerous_to_go_alone%21_Take_this..png)
+<p align="center">
+<img width="600" src="img/dangerous_alone.png">
+</p>
 
 The WebSocket communication consists of two parts: 
 * handshake 
