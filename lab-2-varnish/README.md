@@ -69,7 +69,7 @@ Let us inspect the handshake part which is performed over the HTTP protocol vers
 
 Such a request can look like this:
 
-```bash
+```yaml
 GET /socket.io/?EIO=3&transport=websocket HTTP/1.1
 Host: websocket.example.com
 Sec-WebSocket-Version: 13
@@ -88,7 +88,7 @@ Now disect the Headers from above a little:
 
 Most of the time a Backend should respond with HTTP status code `101` and acknowledge the nonce which was sent by the client. The Backend should compute a value to confirm the request by using the nonce from client and is sent back to the client inside the `Sec-WebSocket-Accept` HTTP Header.
 
-```bash
+```yaml
 HTTP/1.1 101 Switching Protocols
 Upgrade: websocket
 Connection: Upgrade
