@@ -1,7 +1,7 @@
 version: '3'
 services:
   nginx_1_17_6:
-    image: nginx:1.17.6
+    image: ghcr.io/benjitrapp/http-request-smuggling-lab-1-nginx:main
     volumes: 
       - ./conf.d/:/etc/nginx/conf.d/
     ports:
