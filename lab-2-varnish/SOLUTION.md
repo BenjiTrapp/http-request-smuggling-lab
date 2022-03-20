@@ -1,6 +1,6 @@
 
 <p align="center">
-<img width="600" src="../static/solution.png">
+<img width="250" src="../static/solution.png">
 </p>
 
  This one is a more difficult variant of HTTP request smuggling. To access the target API and Page in the hidden network we need to write an Exploit. You can use the one below (with Python2...pain or gain)
