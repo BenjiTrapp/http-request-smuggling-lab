@@ -1,6 +1,6 @@
 <img src="../static/lab1.png">
 
-This first lab is based on NGINX. Your mission is to access the hidden location placed at `/_hidden/index.html` and grab the flag. The endpoint itself get's served by a `notlocalhost` server running somewhere in the background of the `localhost` server. Appending `'Content-Length` might help and needs to be adjusted to get the exploit running.
+This first lab is based on NGINX. Your mission is to access the hidden location placed at `/_hidden/index.html` and grab the flag. The endpoint itself get's served by a `notlocalhost` server running somewhere in the background of the `localhost` server. Don't forget the `\r\n` magic. Appending `'Content-Length` might help and needs to be adjusted to get the exploit running.
 
 <br>
 <br>
