@@ -75,11 +75,11 @@ def main(uri):
     with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sock:
         sock.connect((host, int(port)))
 
-        sock.sendall(req1)
+        sock.sendall(req1.encode('utf8'))
         data = sock.recv(4096)
         print(data)
 
-        sock.sendall(req2)
+        sock.sendall(req2.encode('utf8'))
         data = sock.recv(4096)
         data = data.decode(errors = 'ignore')
 
