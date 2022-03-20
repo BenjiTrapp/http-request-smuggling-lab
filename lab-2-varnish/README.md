@@ -99,3 +99,10 @@ After performing a successfull handshake, the client or backend can transfer dat
 
 When ever you build something with WebSockets: **Itt's important that a client must perform a so-called client-to-server masking!** Masking is done to mitigate potential attacks on the infrastructure, that proxies the WebSocket connections between client and backend. As pointed in RFC 6455, there was a [research](http://www.adambarth.com/papers/2011/huang-chen-barth-rescorla-jackson.pdf) done that showed a proof for cache poisoning attacks against proxies in case the client doesn't perform a client-to-server masking. This will also lead to a possible successful HTTP smuggling attack.
 
+<br>
+<br>
+<br>
+<p align="center">
+<img width="600" src="../static/enjoy.png">
+</p>
+
