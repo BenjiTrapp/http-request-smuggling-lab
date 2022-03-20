@@ -6,7 +6,7 @@ Can't get enough? Want to learn some more fancy things? How's about tricking a V
 
 Now to your goal: To get the flag at the internal network `flask.net` you need to open `/flag`. Obviously you can't access the `/flag` from the outer apache `apache.net` network. As a valuable hint you might need to investiage `socket.io` in the requests and watch out for `html` stuff. It really help to use `Burp` or another attack proxy to time your attack and investiage the target. 
 
-To achive this - you need to write some code :)
+To achive the flag - you probably need to write some code this time :)
 
 
 <p align="center">
