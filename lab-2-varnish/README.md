@@ -61,7 +61,7 @@ The WebSocket communication consists of two parts:
 * handshake 
 * data transfer
 
-Like always TCP or TLS connection is established first with the backend, next the handshake will be performed over the established connection. In the final step the WebSocket frames will be **transferred through the same TCP or TLS connection**. 
+Like always, ar first the TCP or TLS connection is established with the backend. Next the handshake will be performed over the established connection. In the final step the WebSocket frames will be **transferred through the same TCP or TLS connection**. 
 
 As a real hacker it's time to read how the WebSocket protocol is described in [RFC 6455](https://tools.ietf.org/html/rfc6455).
 
