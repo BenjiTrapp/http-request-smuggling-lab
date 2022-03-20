@@ -81,7 +81,7 @@ Cache-Control: no-cache
 Upgrade: websocket
 ```
 
-Now disect the Headers from above a little:
+Now let's dissect the most important Headers from the request above:
 * `Sec-WebSocket-Version` contains WebSocket protocol version (most of the times only version `13` is supported)
 * `Sec-WebSocket-Key` contains usually a random nonce that is base64 encoded
 * `Upgrade` header contain value `websocket`
@@ -97,5 +97,5 @@ Sec-WebSocket-Accept: xUFfT1/AIvZnGdK/XSbIr7zQO10=
 
 After performing a successfull handshake, the client or backend can transfer data using WebSocket frames. Intressting to know is that there are multipe kinds of frames. Each frame has a field `opcode` which tells more about its type.
 
-**What's important that client must do a so-called client-to-server masking!** Masking is done to mitigate potential attacks on the infrastructure that proxies the WebSocket connections between client and backend. As pointed in RFC 6455, there was a [research](http://www.adambarth.com/papers/2011/huang-chen-barth-rescorla-jackson.pdf) done that showed a proof for cache poisoning attacks against proxies in case client doesn't perform client-to-server masking. This also leads to a possible HTTP smuggling attack.
+When ever you build something with WebSockets: **Itt's important that a client must perform a so-called client-to-server masking!** Masking is done to mitigate potential attacks on the infrastructure, that proxies the WebSocket connections between client and backend. As pointed in RFC 6455, there was a [research](http://www.adambarth.com/papers/2011/huang-chen-barth-rescorla-jackson.pdf) done that showed a proof for cache poisoning attacks against proxies in case the client doesn't perform a client-to-server masking. This will also lead to a possible successful HTTP smuggling attack.
 
