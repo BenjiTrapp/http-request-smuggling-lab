@@ -97,7 +97,20 @@ Sec-WebSocket-Accept: xUFfT1/AIvZnGdK/XSbIr7zQO10=
 
 After performing a successfull handshake, the client or backend can transfer data using WebSocket frames. Intressting to know is that there are multipe kinds of frames. Each frame has a field `opcode` which tells more about its type.
 
+As a picture this would look like this:
+
+<p align="center">
+<img width="600" src="img/smuggling-highlevel.png">
+</p>
+
 When ever you build something with WebSockets: **Itt's important that a client must perform a so-called client-to-server masking!** Masking is done to mitigate potential attacks on the infrastructure, that proxies the WebSocket connections between client and backend. As pointed in RFC 6455, there was a [research](http://www.adambarth.com/papers/2011/huang-chen-barth-rescorla-jackson.pdf) done that showed a proof for cache poisoning attacks against proxies in case the client doesn't perform a client-to-server masking. This will also lead to a possible successful HTTP smuggling attack.
+
+Some info regarding masking:
+* Masking key is 32bit long and passed inside a data frame
+* As shown above - the client must send the masked data
+* MASKED = MASK xor DATA
+* As told above usefull against cache poisoning and http smuggling attacks
+
 
 <br>
 <br>
