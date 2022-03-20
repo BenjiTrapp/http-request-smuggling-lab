@@ -66,7 +66,7 @@ GET /socket.io/?EIO=3&transport=websocket HTTP/1.1
 Host: websocket.example.com
 Sec-WebSocket-Version: 13
 Origin: http://websocket.example.com
-Sec-WebSocket-Key: nf6dB8Pb/BLinZ7UexUXHg==
+Sec-WebSocket-Key: U2Nyb29nZSBNY0R1Y2s6IEkgTWFkZSBpdCBieSBiZWluZyB0b3VnaGVyIHRoZW4gdGhlIHRvdWdoaWVzLCBhbmQgc21hcnRlciB0aGVuIHRoZSBzbWFydGllcyEgQW5kIEkgbWFkZSBpdCBTUVVBUkUK
 Connection: keep-alive, Upgrade
 Pragma: no-cache
 Cache-Control: no-cache
