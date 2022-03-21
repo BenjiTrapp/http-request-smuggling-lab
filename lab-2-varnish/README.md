@@ -61,7 +61,7 @@ The WebSocket communication consists of two parts:
 * handshake 
 * data transfer
 
-Like always, ar first the TCP or TLS connection is established with the backend. Next the handshake will be performed over the established connection. In the final step the WebSocket frames will be **transferred through the same TCP or TLS connection**. 
+Like always, as a first step the TCP or TLS connection needs to be established with the backend. Next the handshake will be performed over the established connection. In the final step the WebSocket frames will be **transferred through the same TCP or TLS connection**. 
 
 As a real hacker it's time to read how the WebSocket protocol is described in [RFC 6455](https://tools.ietf.org/html/rfc6455).
 
@@ -103,17 +103,18 @@ As a picture this would look like this:
 <img width="600" src="img/smuggling-highlevel.png">
 </p>
 
-If we mediate about this architecture diagram we can see that in regular business web applications the client and backend communicate through a reverse proxy. The green box can be abstracted as a corporate network. Usually most of the web servers, load balancer, HTTP proxies allow to proxy WebSocket traffic.
+If we mediate about this architecture diagram we can see that this setup is pretty common regarding regular business web applications. The client has to communicate with a (public) backend through a reverse proxy. The green box can be abstracted as a corporate network. Usually most of the web servers, load balancer, HTTP proxies allow to proxy WebSocket traffic.
 
 Now let us bring this WebSocket Communication into a flow:
 1. The Client sends an `Upgrade` request to the reverse proxy. The reverse proxy checks the HTTP method and the different Headers: `Upgrade`, `Sec-WebSocket-Verson` and usually the presence of `Sec-WebSocket-Key`and more if present. If the request was performed correctly, the Proxy will forword the `Upgrade` request of the client to the backend
 2. The Backend answers to the reverse proxy with a HTTP response (and status code 101). This Response has the `Upgrade`and `Sec-WebSocket-Accept` headers set. The reverse proxy will validate the corectness and propagate the response from the backend to the client
 3. The reverse proxy doesn't close the TCP/TLS connection between the client and the backend since both agreed to use this connection for WebSocket communication. If this point is reached - the client and backend can send WebSocket data frames back and forth. The only duty of the reverse proxy now is to check, that the client sends masked WebSocket frames.
 
+Where to attack now? After performing a valid request to the public backend we can send the malicious request piggybacked to the internal network and access things that should be hidden from your eyes. 
 
-When ever you build something with WebSockets: **Itt's important that a client must perform a so-called client-to-server masking!** Masking is done to mitigate potential attacks on the infrastructure, that proxies the WebSocket connections between client and backend. As pointed in RFC 6455, there was a [research](http://www.adambarth.com/papers/2011/huang-chen-barth-rescorla-jackson.pdf) done that showed a proof for cache poisoning attacks against proxies in case the client doesn't perform a client-to-server masking. This will also lead to a possible successful HTTP smuggling attack.
+When ever you build something with WebSockets: **It's important that a client must perform a client-to-server masking!** Masking is done to mitigate potential attacks on the infrastructure, that proxies the WebSocket connections between client and backend. As pointed in RFC 6455, there was a [research](http://www.adambarth.com/papers/2011/huang-chen-barth-rescorla-jackson.pdf) done that showed a proof for cache poisoning attacks against proxies in case the client doesn't perform a client-to-server masking. This will also lead to a possible successful HTTP smuggling attack.
 
-Some info regarding masking:
+Wrapping up and concentrate the info about masking:
 * Masking key is 32bit long and passed inside a data frame
 * As shown above - the client must send the masked data
 * MASKED = MASK xor DATA
