@@ -13,6 +13,13 @@ Read carefully this [site](https://portswigger.net/web-security/request-smugglin
 
 If you still feel lost you can peek into the `SOLUTION.md` file in each of the labs - if you find another path to the solution send me a Pull Request and tell the world how you achieved it.
 
+To get the labs done you will require these things:
+* Docker and Docker-Compose
+* A tool to intercept traffic like: Burp, Hetty or OWASP ZAP
+* Browser with debugging tools
+* Terminal to run curl
+* An IDE with support the language you like
+
 <br>
 <img width="150" src="static/disclaimer.png">
 <br>
