@@ -1,6 +1,6 @@
 <img src="static/tag.png">
 
-Ready to steal some treasures from Uncle Dagoberts Money Bin? 
+Ready to steal some treasures from Scrooge McDuck's Money Bin?
 
 <p align="center">
 <img width="300" src="static/fontaine.gif">
@@ -9,15 +9,16 @@ Ready to steal some treasures from Uncle Dagoberts Money Bin?
 <img width="400" src="static/help.png">
 <br>
 
-Read carefully this [site](https://portswigger.net/web-security/request-smuggling) and finish the tutorial to undertand this vulnerability. This kind of attack is very tricky to understand, but is totally awesome when you finally see it in action.
+Read carefully this [site](https://portswigger.net/web-security/request-smuggling) and finish the tutorial to undertand this vulnerability. This kind of attack is very tricky to understand, but totally awesome when you finally see it in action.
 
-If you still feel lost you can peek into the `SOLUTION.md` file in each of the labs - if you find another path to the solution send me a Pull Request and tell the world how you achieved it.
 
-To get the labs done you will require these things:
+If you still feel lost you can peek into the `SOLUTION.md` file in each of the labs - if you find another path to the flag send me a Pull Request and tell the world how you achieved it.
+
+To get the labs done you will require at least these things:
 * Docker and Docker-Compose
-* A tool to intercept traffic like: Burp, Hetty or OWASP ZAP
-* Browser with debugging tools
-* Terminal to run curl
+* A tool to intercept traffic like: [Burp](https://portswigger.net/burp/communitydownload), [Hetty](https://github.com/dstotijn/hetty) or [OWASP ZAP](https://github.com/zaproxy/zaproxy)
+* Your favorite Browser with debugging tools
+* Terminal to run curl, netcat etc.
 * An IDE with support the language you like
 
 <br>
@@ -39,5 +40,5 @@ To get the labs done you will require these things:
 <br>
 <p align="center">
 <img width="600" src="static/panzerknacker.png">
-<br> Have fun smuggling
+<br> Have fun and keep smuggling
 </p>
