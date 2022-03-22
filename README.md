@@ -19,7 +19,7 @@ To get the labs done you will require at least these things:
 * A tool to intercept traffic like: [Burp](https://portswigger.net/burp/communitydownload), [Hetty](https://github.com/dstotijn/hetty) or [OWASP ZAP](https://github.com/zaproxy/zaproxy)
 * Your favorite Browser with debugging tools
 * Terminal to run curl, netcat etc.
-* An IDE with support the language you like
+* An IDE with support for the language you like (Spoiler: I used bash and python. Go and Java should work as well)
 
 <br>
 <img width="150" src="static/disclaimer.png">
